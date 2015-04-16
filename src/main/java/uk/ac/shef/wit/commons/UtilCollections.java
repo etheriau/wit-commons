@@ -77,12 +77,12 @@ public class UtilCollections {
    };
 
    public static <E, B extends Collection<E>> B add(final B base, final E... elements) {
-      for (E element : elements) base.add(element);
+      base.addAll( Arrays.asList( elements ) );
       return base;
    }
 
    public static <E, B extends Collection<E>> B add2(final B base, final E... elements) {
-      for (E element : elements) base.add(element);
+      base.addAll( Arrays.asList( elements ) );
       return base;
    }
 

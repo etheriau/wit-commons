@@ -12,7 +12,7 @@ public class LogToPrintStream implements LoggerObserver {
 
    protected static final int DISPLACEMENT_UNIT = 3;
 
-   protected PrintStream _out;
+   protected final PrintStream _out;
 
    /**
     * Sole constructor.

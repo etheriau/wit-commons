@@ -11,7 +11,7 @@ import java.util.NoSuchElementException;
  */
 public abstract class IteratorWrapWithLookahead <T> extends IteratorNoRemove<T> {
 
-   private Iterator<T> _iterator;
+   private final Iterator<T> _iterator;
    private T _lookahead;
 
    /**

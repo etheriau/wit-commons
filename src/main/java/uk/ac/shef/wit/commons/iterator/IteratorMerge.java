@@ -2,7 +2,6 @@ package uk.ac.shef.wit.commons.iterator;
 
 import java.util.Collections;
 import java.util.Iterator;
-import java.util.List;
 
 /**
  * Convenience class to addAll several iterators.
@@ -12,13 +11,13 @@ import java.util.List;
  */
 public final class IteratorMerge<T> implements Iterator<T> {
 
-   private Iterator<T>[] _iterators;
+   private final Iterator<T>[] _iterators;
    private Iterator<T> _iterator;
    private int _index;
 
    public IteratorMerge(final Iterator<T> ... iterators) {
       _iterators = iterators;
-      _iterator = ((List<T>) Collections.emptyList()).iterator();
+      _iterator = Collections.<T>emptyList().iterator();
       hasNext();
    }
 

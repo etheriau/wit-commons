@@ -39,7 +39,7 @@ public class Logger {
    }
 
 
-   private Collection<LoggerObserver> _observers = new LinkedList<LoggerObserver>();
+   private final Collection<LoggerObserver> _observers = new LinkedList<LoggerObserver>();
    private int _stageLevel = 0;
 
    private Logger() { }

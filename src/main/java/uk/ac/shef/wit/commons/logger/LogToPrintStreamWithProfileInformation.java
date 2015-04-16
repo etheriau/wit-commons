@@ -12,7 +12,7 @@ import java.io.PrintStream;
  */
 public class LogToPrintStreamWithProfileInformation extends LogToPrintStream {
 
-   protected long[] _time = new long[1 << 8];
+   protected final long[] _time = new long[1 << 8];
 
    public LogToPrintStreamWithProfileInformation(final PrintStream out) {
       super(out);

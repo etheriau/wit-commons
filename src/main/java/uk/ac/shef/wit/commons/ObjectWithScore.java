@@ -9,8 +9,8 @@ import java.util.Comparator;
  *         (<a  href="mailto:J.Iria@dcs.shef.ac.uk" >email</a>)
  */
 public class ObjectWithScore <T> implements Comparable<ObjectWithScore<T>> {
-   private T _object;
-   private double _score;
+   private final T _object;
+   private final double _score;
 
    public ObjectWithScore(final T object) {
       this(object, 0.0);

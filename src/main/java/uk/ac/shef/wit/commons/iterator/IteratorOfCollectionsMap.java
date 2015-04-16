@@ -10,12 +10,12 @@ import java.util.*;
  */
 public final class IteratorOfCollectionsMap<T> implements Iterator<T> {
 
-   private Iterator<? extends Collection<T>> _mapIterator;
+   private final Iterator<? extends Collection<T>> _mapIterator;
    private Iterator<T> _collectionIterator;
 
    public IteratorOfCollectionsMap(final Map<?, ? extends Collection<T>> map) {
       _mapIterator = map.values().iterator();
-      _collectionIterator = ((List<T>) Collections.emptyList()).iterator();
+      _collectionIterator = Collections.<T>emptyList().iterator();
       hasNext();
    }
 

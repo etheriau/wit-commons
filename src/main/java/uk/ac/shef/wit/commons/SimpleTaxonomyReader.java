@@ -16,7 +16,7 @@ import java.io.IOException;
  */
 public class SimpleTaxonomyReader {
 
-   protected String _prefix;
+   protected final String _prefix;
 
    public SimpleTaxonomyReader() {
       this("");

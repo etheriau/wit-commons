@@ -7,7 +7,7 @@ package uk.ac.shef.wit.commons;
  *         (<a  href="mailto:J.Iria@dcs.shef.ac.uk" >email</a>)
  */
 public abstract class NestedViewAbstract<T> implements NestedView<T> {
-   private NestedView<T> _nested;
+   private final NestedView<T> _nested;
 
    protected NestedViewAbstract(final NestedView<T> nested) {
       _nested = nested;

@@ -120,7 +120,9 @@ public class UtilFiles {
    public static void deleteFilesRecursive(final File path) {
       if (path.isDirectory()) {
          final File[] files = path.listFiles();
-         for (File file : files) deleteFilesRecursive(file);
+         if ( files != null ) {
+            for (File file : files) deleteFilesRecursive(file);
+         }
       }
       path.delete();
    }
@@ -242,7 +244,9 @@ public class UtilFiles {
    private static void listFilesRecursive(final Collection<File> fileCollection, final File path) {
       if (path.isDirectory()) {
          final File[] files = path.listFiles();
-         for (File file : files) listFilesRecursive(fileCollection, file);
+         if ( files != null ) {
+            for (File file : files) listFilesRecursive(fileCollection, file);
+         }
       } else
          fileCollection.add(path);
    }

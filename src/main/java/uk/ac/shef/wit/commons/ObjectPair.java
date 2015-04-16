@@ -37,16 +37,24 @@ public class ObjectPair<K extends Comparable<K>,V> implements Comparable<ObjectP
       return _key.compareTo(pair._key);
    }
 
-   public boolean equals(final Object o) {
-      if (this == o) return true;
-      final ObjectPair<K,V> pair = (ObjectPair<K,V>)o;
-      return _key.equals(pair._key) && _value.equals(pair._value);
-   }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
-   public int hashCode() {
-      return 29 * _key.hashCode() + _value.hashCode();
-   }
+        ObjectPair<?, ?> that = (ObjectPair<?, ?>) o;
 
+        if (_key != null ? !_key.equals(that._key) : that._key != null) return false;
+        return !(_value != null ? !_value.equals(that._value) : that._value != null);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = _key != null ? _key.hashCode() : 0;
+        result = 31 * result + (_value != null ? _value.hashCode() : 0);
+        return result;
+    }
 }
 
 /*
