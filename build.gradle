@@ -1,0 +1,28 @@
+defaultTasks 'assemble'
+
+apply plugin: 'maven'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+group = "uk.ac.shef.dcs.oak.wit-commons.eyt"
+archivesBaseName = 'wit-commons'
+version = "1.0Alpha_eyt"
+status = 'integration'
+
+
+sourceCompatibility = 1.6 
+targetCompatibility = 1.6 
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+dependencies {
+}
+
+task javadocs(type: Javadoc) {
+  source = sourceSets.main.allJava
+}
+

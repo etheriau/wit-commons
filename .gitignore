@@ -1,0 +1,10 @@
+.gradle/
+out/
+build/
+/bin/
+.classpath
+.project
+.settings/
+wit-commons.iml
+wit-commons.ipr
+wit-commons.iws
